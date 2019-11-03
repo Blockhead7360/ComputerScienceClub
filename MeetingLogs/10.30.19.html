@@ -12,17 +12,21 @@
     <br>
     <br><b>Else If</b>
     <br>
-    <br>Adding an else will let you run code if the if statement isn't true. Here's an example:
+    <br>You can smack an else if in between your if and else to check for other conditions in the same statement. Here's an example:
     <br>
     <br>
     <code>
-      if (number == 20){
+      if (number >= 20) {
       <br>
-      <br>  //runs whatever's in here only if the number variable is 20
+      <br>  //runs whatever's in here only if the number variable is greater than or equal to 20
+      <br>
+      <br>} else if (number >= 10) {
+      <br>
+      <br>  //runs whatever's in here if the number variable is NOT greater than or equal to 20 but IS greater than or equal to 10.
       <br>
       <br>} else {
       <br>
-      <br>  //runs whatever's in here only if the number variable isn't 20
+      <br>  //runs whatever's in here only if the number variable is less than both 20 and 10.
       <br>
       <br>}
       <br>
@@ -32,24 +36,60 @@
     
   <p><br><br><br></p>
 
-  <h2>Relational Operators</h2>
-  <p>Relational operators compare two things and return a true or false (used best in if statements). You can put the following operators in between two variables or between a variable and a value to compare them.
+  <h2>Conditional Operators</h2>
+  <p>Conditional operators compare two sets of comparisons and will only return true if it passes all the statements correctly (you'll see what I mean). You can put the following operators in between two comparisons (see 
+    <a href="http://repo.blockhead7360.com/ComputerScienceClub/MeetingLogs/10.16.19.html">relational operators</a>.
     <br>
     <br>
-    <br><b>==</b>
-    <br>Checks whether the two are equal to each other.
+    <br><b>and</b>
+    <br>Using && in between two comparisons will only let the if statement return true if both comparisons are true.
     <br>
     <br>
-    <br><b>&lt or &gt</b>
-    <br>Checks whether the left is less/greater than the right.
+    <code>
+      if (number == 20 && someOtherNumber >= 4000) {
+      <br>
+      <br>  //code here only runs if both of those are true
+      <br>
+      <br>}
+    </code>
     <br>
     <br>
-    <br><b>&lt= or &gt=</b>
-    <br>Checks whether the left is less/greater than or equal to the right.
+    <br><b>or</b>
+    <br>Using || in between two comparisons will let the if statement return true if at least one of the comparisons is true.
     <br>
     <br>
-    <br><b>!=</b>
-    <br>Checks whether the two are NOT equal to each other.
+    <code>
+      if (number == 20 || someOtherNumber >= 4000) {
+      <br>
+      <br>  //code here will run as long as at least one of those is true
+      <br>
+      <br>}
+    </code>
+    <br>
+    <br>
+    <br><b>not</b>
+    <br>This is a bit different. Using ! in front of comparisons will return the opposite of what it would normally return.
+    <br>
+    <br>
+    <code>
+      if (!(someOtherNumber >= 4000) {
+      <br>
+      <br>  //code here will only run if someOtherNumber is NOT greater than or equal to 4000
+      <br>
+      <br>}
+      <br>
+      <br>if (!(number == 20 && someOtherNumber >= 4000) {
+      <br>
+      <br>  //code here will only run if at least one of those is not true (because when one is not true, then the && makes the whole thing false, but the ! makes it the opposite so false becomes true yay)
+      <br>
+      <br>}
+      <br>
+      <br>if (!(number == 20 || someOtherNumber >= 4000) {
+      <br>
+      <br>  //code here will only run if both of those are false
+      <br>
+      <br>}
+    </code>
   </p>
   
   <p><br><br><br></p>
