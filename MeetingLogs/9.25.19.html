@@ -1,61 +1,133 @@
 <html>
-<p>Computer Science Club</p>
-<h1>September 25, 2019 - Java Introduction</h1>
-  
-<p>This was our first Computer Science Club meeting (very cool). Here's pretty much what we did (sorry this might be tedious to read but like just show up to the meetings and you won't have to).</p>
+  <p>Computer Science Club</p>
+  <h1>September 25, 2019 - Java 1 (setup, data types)</h1>
+  <p>This was our first Computer Science Club meeting (very cool). Here's pretty much what we did (sorry this might be tedious to read but like just show up to the meetings and you won't have to).</p>
 
-<p><br><br><br></p>
+  <p><br><br><br></p>
 
-<h2>Using Eclipse and Java</h2>
+  <h2>Using Eclipse and Java</h2>
 
-<p><b>About</b>
-  <br>
-  <br><a href="http://eclipse.org">Eclipse</a> is an IDE (integrated development environment) that
+  <p><b>About</b>
+    <br>
+    <br><a href="http://eclipse.org">Eclipse</a> is an IDE (integrated development environment) that
 allows us to code and compile with ease. We're able to handle our projects more efficiently and code with the help of content
 assist (a heck load of more stuff but for now we don't need to use it all).
-  <br>
-  <br>
-  <br><b>Projects</b>
-  <br>
-  <br>Create a project by right clicking on the 'Projects' view on the left -> New -> Java Project
-  <br>Enter a name that you'd want to use and hit [Enter]. This name is only for your reference and won't be in any part of your actual program.
-  <br>
-  <br>
-  <br><b>Packages</b>
-  <br>
-  <br>Packages are like folders (for what we're doing right now). Create a package by right clicking on 'src' within your project -> New -> Package
-  <br>Naming packages usually follow certain naming conventions. They look like a URL backwards, followed by a project identifier, followed by an optional category.
-  <br><i>(example: com.google.myproject and com.google.myproject.utilities)</i>
-  <br>
-  <br>
-  <br><b>Classes</b>
-  <br>
-  <br>Classes are where all of your code is run from. We'll get into more details later, but for now, you just need a few to run basic code.
-  <br>Classes follow naming conventions as well: they must start with a CAPITAL LETTER and have no spaces.
-  <br><i>(example: HelloWorld)</i>
+    <br>
+    <br>
+    <br><b>Projects</b>
+    <br>
+    <br>Create a project by right clicking on the 'Projects' view on the left -> New -> Java Project
+    <br>Enter a name that you'd want to use and hit [Enter]. This name is only for your reference and won't be in any part of your actual program.
+    <br>
+    <br>
+    <br><b>Packages</b>
+    <br>
+    <br>Packages are like folders (for what we're doing right now). Create a package by right clicking on 'src' within your project -> New -> Package
+    <br>Naming packages usually follow certain naming conventions. They look like a URL backwards, followed by a project identifier, followed by an optional category.
+    <br><i>(example: com.google.myproject and com.google.myproject.utilities)</i>
+    <br>
+    <br>
+    <br><b>Classes</b>
+    <br>
+    <br>Classes are where all of your code is run from. We'll get into more details later, but for now, you just need a few to run basic code.
+    <br>Classes follow naming conventions as well: they must start with a CAPITAL LETTER and have no spaces.
+    <br><i>(example: HelloWorld)</i> 
+  </p>
+    
+  <p><br><br><br></p>
+
+  <h2>What is Java?</h2>
+  <p>It's an object-oriented programming language (good for basics but also very useful in the future). Like literally pretty much everything runs Java (television, computer, etc.)
+    <br>
+    <br>
+    <br><b>Important things to know</b>
+    <br>
+    <br>- All lines must end with a semicolon ; (except for methods or other containers that use { })
+    <br>- Everything is cAse SenSitIvE
+    <br>- Spacing in between lines doesn't matter (so space out code for easier reading)
   </p>
   
-<p><br><br><br></p>
-
-
-<h2>Introduction to Java</h2>
-
-<p><b>What is Java</b>
-  <br>
-  <br>It's an object-oriented programming language (good for basics but also very useful in the future). Like literally pretty much everything runs Java (television, computer, etc.
-  <br>
-  <br>
-  <br><b>The Main Method </b>
-  <br>
-  <br>Your Java program needs to have a main method. We'll go into detail about what each of the modifiers mean, but for now, you'll just need to copy exactly as shown below:
-  <br>
-  <br><code>public static void main(String[] args){<br><br><br>}</code>
-  <br>
-  <br>Enter a name that you'd want to use and hit [Enter]. This name is only for your reference and won't be in any part of your actual program.
+  <h2>The Main Method</h2>
+  <p>Your Java program needs to have a main method. We'll go into detail about what each of the modifiers mean, but for now, you'll just need to copy exactly as shown below:
+    <br>
+    <br>
+    <code>
+      public static void main(String[] args){
+    
+      }
+    </code>
+    <br>
+    <br>This is where your code will start running from when the program is run. It'll start with the first line of this method and continue by reading from left to right top to bottom.  
   </p>
   
-<p><br><br><br></p>
+  <h2>Data Types and Variables</h2>
+  <p><b>About Data Types</b>
+    <br>
+    <br>There are a lot of different variable types you can create. You store values and content in variables, by the way. See below for a bunch of the common ones.
+    <br>
+    <br>
+    <br><b>Initializing them with code</b>
+    <br>
+    <br>To create a variable, you'd type it out like so:
+    <br>
+    <code>
+      String hello = "Hello world!";
+    </code>
+    <br>
+    <br>Where "String" is the data type (see below), "hello" is the identifier of the variable (this can be whatever you want, everytime you use this variable in your code, you'll refer
+    to it with this name), "=" means your assigning the value on the right to the variable on the left, and "Hello world!" is replaced with an appropriate value.
+    <br>
+    <br>
+    <br><b>String</b>
+    <br>A String is any piece of text (can include letters, numbers, symbols, spaces, etc.).
+    <br>Must be surrounded by double quotation marks "
+    <br>
+    <code>
+      String myAddress = "1 Apple Park Way";
+    </code>
+    <br>
+    <br><b>int</b>
+    <br>An int is an integer (any full number). It can be negative but no decimals.
+    <br>
+    <code>
+      int numberOfEmployees = 12000;
+    </code>
+    <br>
+    <br><b>boolean</b>
+    <br>A boolean can only be true or false.
+    <br>
+    <code>
+      boolean isCool = true;
+    </code>
+    <br>
+    <br><b>double</b>
+    <br>A double is any number including a decimal point. If you set it to a whole number, it will automatically include the .0 when used.
+    <br>
+    <code>
+      double revenueInBillions = 258.5;
+    </code>
+    <br>
+    <br><b>char</b>
+    <br>A char is a character (only one letter, number, symbol, etc.).
+    <br>Must be surrounded by single quotation marks '
+    <br>
+    <code>
+      char firstLetter = 'A';
+    </code>
+  </p>
   
-  <h2>lol ill finish this later sorry</h2>
+  <h2>Printing to the Console</h2>
+  <p>You can print to the console by using the following line of code:
+    <br>
+    <code>
+      System.out.println(&ltvariable&gt);
+    </code>
+    <br>
+    <br>Replace &ltvariable&gt with either the variable identifier to print out or any value.
+  </p>
   
+  <p><br><br><br></p>
+  
+  <p><b>If you have any questions, ask them at Computer Science Club!</b></p>
+    
 </html>
