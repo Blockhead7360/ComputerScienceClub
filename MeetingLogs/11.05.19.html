@@ -8,18 +8,92 @@
   <h2>Intro to Arrays</h2>
 
   <p>Arrays are lists of the same data type stored in one variable. For example, you could have an array of 10 integers, meaning there are ten different numbers stored in one variable as a list.
-  <br>
-  <br>
-  <br><b>Defining an array</b>
-  <br>An array can be created by using [] next to a data type when creating a variable. You can then place multiple values separated by commas within {} as the value of the array. Like this:
-  <br>
-  <br>
-  
+    <br>
+    <br>
+    <br><b>Defining an array</b>
+    <br>An array can be created by using [] next to a data type when creating a variable. You can then place multiple values separated by commas within {} as the value of the array. Like this:
+    <br>
+    <br>
+    <code>
+      String[] listOfStrings = {"Hello", "String 2", "How are you doing?", "Computer Science Club!"};
+    </code>
+    <br>
+    <br>or
+    <br>
+    <br>
+    <code>
+      int[] listOfInts = {1, 5, 2, 3, 5, 7, 2};
+    </code>
+    <br>
+    <br>and the same with other data types.
+    <br>
+    <br>
+    <br>These kinds of arrays are fixed in size. You can't add or remove values, only set ones that are already made.
+    <br>
+    <br>You can create an empty array like this:
+    <br>
+    <br>
+    <code>
+      double[] listOfDoubles = new double[5];
+    </code>
+    <br>
+    <br>where the number in the brackets is the size of the array. We'll learn what "new" is (and how to create instances) on a later date.
+    <br>
+    <br>
+    <br><b>Indexes in Java</b>
+    <br>To access values from any sort of array or like anything else, the first index of that list is 0, second is 1, and so forth.
+    <br>
+    <br>For example: in "Hello friend!" the character 'H' is the 0th index, and the character '!' is the 12th index. Even though that String has 13 characters, there is no 13th index.
+    <br>
+    <br>
+    <br><b>Getting values from an array</b>
+    <br>To get a value from an array, simply refer to the variable name and use [i] after it where <i>i</i> is the index.
+    <br>
+    <br>For example:
+    <br>
+    <br>
+    <code>
+      String[] listOfStrings = {"Hello", "String 2", "How are you doing?", "Computer Science Club!"};
+      <br>
+      <br>System.out.println(listOfStrings[0]);
+      <br>//Hello
+      <br>
+      <br>System.out.println(listOfStrings[2]);
+      <br>//How are you doing?
+      <br>
+    </code>
+    <br>
+    <br>
+    <br><b>Setting values within an array</b>
+    <br>To set a value within an array, refer to the variable name with the [i] like above and use the = to set a value, like with any other variable.
+    <br>
+    <br>For example:
+    <br>
+    <br>
+    <code>
+      listOfStrings[0] = "What is up?";
+      <br>//Hello is replaced with What is up? in the array
+    </code>
+    <br>
+    <br>
+    <br><b>Getting the length of an array</b>
+    <br>To get the length of an array, call .length from the array. Like this:
+    <br>
+    <br>
+    <code>
+      int lengthOfList = listOfStrings.length;
+      <br>//lengthOfList equals 4 in this case
+    </code>
+    <br>
+    <br>Because the length starts at 1 (an array with only one element would return 1, not 0) and because the index of the array starts at 0, you would not be able to
+    retreive the last element of the array using only array.length (you'd get an error).
+    <br>
+    <br>You'd have to do <code>listOfStrings.length - 1</code> since the the last index is one less than the length (since it starts at 0 you get it now).
   </p>
     
   <p><br><br><br></p>
 
-  <h2>Conditional Operators</h2>
+  <h2>Loops</h2>
   <p>Conditional operators compare two sets of comparisons and will only return true if it passes all the statements correctly (you'll see what I mean). You can put the following operators in between two comparisons (see 
     <a href="http://repo.blockhead7360.com/ComputerScienceClub/MeetingLogs/10.16.19.html">relational operators</a>).
     <br>
