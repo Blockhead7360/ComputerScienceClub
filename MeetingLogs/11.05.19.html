@@ -94,59 +94,21 @@
   <p><br><br><br></p>
 
   <h2>Loops</h2>
-  <p>Conditional operators compare two sets of comparisons and will only return true if it passes all the statements correctly (you'll see what I mean). You can put the following operators in between two comparisons (see 
-    <a href="http://repo.blockhead7360.com/ComputerScienceClub/MeetingLogs/10.16.19.html">relational operators</a>).
+  <p>Loops allow for the same code to be run multiple times. You can use them to keep doing something over and over again until something happens, or to loop through an array and do something with each value.
+    <br>You'll see what I mean.
+    <br>
+    <br><b>for loop</b>
+    <br>A for loop has 3 parts, an initialization, a termination, and an increment. Here's a template:
     <br>
     <br>
-    <br><b>and</b>
-    <br>Using && in between two comparisons will only let the if statement return true if both comparisons are true.
-    <br>
-    <br>
-    <code>
-      if (number == 20 && someOtherNumber >= 4000) {
+    <code>for (<init>; <term>; <inc>){
       <br>
-      <br>  //code here only runs if both of those are true
       <br>
       <br>}
     </code>
     <br>
     <br>
-    <br><b>or</b>
-    <br>Using || in between two comparisons will let the if statement return true if at least one of the comparisons is true.
-    <br>
-    <br>
-    <code>
-      if (number == 20 || someOtherNumber >= 4000) {
-      <br>
-      <br>  //code here will run as long as at least one of those is true
-      <br>
-      <br>}
-    </code>
-    <br>
-    <br>
-    <br><b>not</b>
-    <br>This is a bit different. Using ! in front of comparisons will return the opposite of what it would normally return.
-    <br>
-    <br>
-    <code>
-      if (!(someOtherNumber >= 4000) {
-      <br>
-      <br>  //code here will only run if someOtherNumber is NOT greater than or equal to 4000
-      <br>
-      <br>}
-      <br>
-      <br>if (!(number == 20 && someOtherNumber >= 4000) {
-      <br>
-      <br>  //code here will only run if at least one of those is not true (because when one is not true, then the && makes the whole thing false, but the ! makes it the opposite so false becomes true yay)
-      <br>
-      <br>}
-      <br>
-      <br>if (!(number == 20 || someOtherNumber >= 4000) {
-      <br>
-      <br>  //code here will only run if both of those are false
-      <br>
-      <br>}
-    </code>
+      
   </p>
   
   <p><br><br><br></p>
