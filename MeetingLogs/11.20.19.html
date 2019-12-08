@@ -11,63 +11,76 @@
   <h2>Adding Addiction! - Challenge 1</h2>
 
   <p>Use your knowledge of arrays, user input, loops (optional), and other stuff to take 5 numbers from the user and print out their sum.
+    <br>
+    <br><a href="http://repo.blockhead7360.com/ComputerScienceClub/Challenges/addingaddiction.html">Go to challenge</a>
   </p>
   
   <p><br><br><br></p>
   
-  <h2>User Input (Scanner)</h2>
+  <h2>Intro to Methods and Arguments</h2>
   
-  <p>We're always printing stuff out to the console with System.out, but now let's try allowing the user to type something into the console and using it in the program.
+  <p>If you check out <a href="http://repo.blockhead7360.com/ComputerScienceClub/MeetingLogs/11.13.19.html">last week's meeting log</a>, you'll get a basic overview of writing and calling methods.
+    <br>
+    <br>Now, let's make them a bit more useful.
     <br>
     <br>
-    <br><b>Preparing the scanner</b>
-    <br>In your code, let's create a Scanner object. We'll go over how making an object works on a later date, but for now, follow as done below (you can name the variable whatever you want, though):
+    <br><b>Method arguments</b>
+    <br>If you look at the method you write, you might be curious as to why there are those empty () at the end of the method name. Are they just there to indicate that it's a method? No, there's something else.
+    <br>
+    <br>Introducing: method arguments. Let me show you some example code, then we'll explain it below.
     <br>
     <br>
-    <code>Scanner myscanner = new Scanner(System.in);
+    <code>public int combineNumber(int numberOne, int numberTwo, boolean add) {
+      <br>
+      <br>  int newNumber = 0;
+      <br>
+      <br>  if (add) {
+      <br>    newNumber = numberOne + numberTwo;
+      <br>  } else {
+      <br>    newNumber = numberOne - numberTwo;
+      <br>  }
+      <br>
+      <br>  return newNumber;
+      <br>
+      <br>}
     </code>
     <br>
+    <br>Okay, so there's a lot going on in that code (actually no there isn't, it's really basic). Here's what's happening:
+    <br>
+    <br>The method is asking for three arguments: two numbers and a boolean. It's like creating variables without setting their values (because that's done later).
+    <br>
+    <br>If add is true, it'll take the two numbers, add them, and then return them.
+    <br>If add is false, it'll take the two numbers, subtract them, and then return them.
     <br>
     <br>
-    <br><b>Using the scanner for numbers</b>
-    <br>Now that we have a scanner named myscanner, we can use it to ask for user input. Watch this:
+    <br>Now, let's use this method with some numbers:
     <br>
     <br>
-    <code>System.out.println("Enter a number");
+    <code>public void run() {
       <br>
-      <br>int thatNumber = myscanner.nextInt();
+      <br>  int first = combineNumber(5, 82, true);
+      <br>  
+      <br>  int second = combineNumber(471, 928, false);
+      <br>
+      <br>  int numberOne = 1;
+      <br>  int numberTwo = 10000;
+      <br>  boolean shouldIAdd = true;
+      <br>
+      <br>  int third = combineNumber(numberOne, numberTwo, shouldIAdd);
+      <br>
+      <br>}
     </code>
     <br>
-    <br>When the nextInt method from the scanner is called, the program will pause until the user enters a number into the console.
+    <br>To use arguments, simply put their values in the same order as you ask for them between the two parentheses.
     <br>
-    <br>Now, we have that number stored in our thatNumber variable.
-    <br>
-    <br>Watch me print out the sum of two user-inputted numbers:
-    <br>
-    <br>
-    <code>System.out.println("Enter the first number");
-      <br>
-      <br>int numberOne = myScanner.nextInt();
-      <br>
-      <br>System.out.println("Enter the second number");
-      <br>
-      <br>int numberTwo = myScanner.nextInt();
-      <br>
-      <br>int total = numberOne + numberTwo;
-      <br>
-      <br>System.out.println("The total is: " + total);
-    </code>
-    <br>
-    <br>Magic? No, it's science!
+    <br>Figure out what the ints first, second, and third should be equal to, then look below.
     <br>
     <br>
     <br>
-    <br><b>Using the scanner for words</b>
-    <br>You can get a word from the console by using scanner's next method.
+    <br>first is equal to 87, second is equal to -457, and third is equal to 10001.
     <br>
     <br>
-    <code>String wordInput = myscanner.next();
-    </code> 
+    <br>Remember, you can put any variable type or object as method arguments, not just ints and booleans.
   </p>
   
   <p><br><br><br></p>
