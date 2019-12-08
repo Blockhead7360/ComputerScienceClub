@@ -32,15 +32,15 @@
     <br>
     <code>public int combineNumber(int numberOne, int numberTwo, boolean add) {
       <br>
-      <br>  int newNumber = 0;
+      <br>&emsp;int newNumber = 0;
       <br>
-      <br>  if (add) {
-      <br>    newNumber = numberOne + numberTwo;
-      <br>  } else {
-      <br>    newNumber = numberOne - numberTwo;
-      <br>  }
+      <br>&emsp;if (add) {
+      <br>&emsp;&emsp;newNumber = numberOne + numberTwo;
+      <br>&emsp;} else {
+      <br>&emsp;&emsp;newNumber = numberOne - numberTwo;
+      <br>&emsp;}
       <br>
-      <br>  return newNumber;
+      <br>&emsp;return newNumber;
       <br>
       <br>}
     </code>
@@ -58,15 +58,15 @@
     <br>
     <code>public void run() {
       <br>
-      <br>  int first = combineNumber(5, 82, true);
+      <br>&emsp;int first = combineNumber(5, 82, true);
       <br>  
-      <br>  int second = combineNumber(471, 928, false);
+      <br>&emsp;int second = combineNumber(471, 928, false);
       <br>
-      <br>  int numberOne = 1;
-      <br>  int numberTwo = 10000;
-      <br>  boolean shouldIAdd = true;
+      <br>&emsp;int numberOne = 1;
+      <br>&emsp;int numberTwo = 10000;
+      <br>&emsp;boolean shouldIAdd = true;
       <br>
-      <br>  int third = combineNumber(numberOne, numberTwo, shouldIAdd);
+      <br>&emsp;int third = combineNumber(numberOne, numberTwo, shouldIAdd);
       <br>
       <br>}
     </code>
