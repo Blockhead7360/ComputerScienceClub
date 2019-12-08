@@ -18,6 +18,44 @@
   </code>
   
   <h2>with loop, with array</h2>
-    
+  <code>int[] numbers = new int[5];
+    <br>
+    <br>Scanner sc = new Scanner(System.in);
+    <br>
+    <br>for (int i = 0; i &lt 5; i++)
+    <br>  numbers[i] = sc.nextInt();
+    <br>
+    <br>int total = 0;
+    <br>
+    <br>for (int i = 0; i &lt 5; i++)
+    <br>  total += numbers[i];
+    <br>
+    <br>System.out.println(total);
+  </code>
+  
+  <h2>without loop, without array</h2>
+  <code>int total = 0;
+    <br>
+    <br>Scanner sc = new Scanner(System.in);
+    <br>
+    <br>total += sc.nextInt();
+    <br>total += sc.nextInt();
+    <br>total += sc.nextInt();
+    <br>total += sc.nextInt();
+    <br>total += sc.nextInt();
+    <br>
+    <br>System.out.println(total);
+  </code>
+  
+  <h2>with loop, without array</h2>
+  <code>int total = 0;
+    <br>
+    <br>Scanner sc = new Scanner(System.in);
+    <br>
+    <br>for (int i = 0; i &lt 5; i++)
+    <br>  total += sc.nextInt();
+    <br>
+    <br>System.out.println(total);
+  </code>
     
 </html>
