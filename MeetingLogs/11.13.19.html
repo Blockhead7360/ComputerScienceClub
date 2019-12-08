@@ -48,34 +48,34 @@
     <br>
     <code>public class HelloWorld {
       <br>
-      <br>  public void myMethod() {
+      <br>&emsp;public void myMethod() {
       <br>
-      <br>    System.out.println("dilan!");
+      <br>&emsp;&emsp;System.out.println("dilan!");
       <br>
-      <br>  }
+      <br>&emsp;}
       <br>
-      <br>  private void myOtherMethod() {
+      <br>&emsp;private void myOtherMethod() {
       <br>
-      <br>    System.out.println("ranai!");
+      <br>&emsp;&emsp;System.out.println("ranai!");
       <br>
-      <br>  }
+      <br>&emsp;}
       <br>
       <br>}
       <br>
       <br>
       <br>public class ClassyClass {
       <br>
-      <br>  public static void main(String[] args) {
+      <br>&emsp;public static void main(String[] args) {
       <br>
-      <br>    HelloWorld h = new HelloWorld(); //&lt-- you'll learn about this later
+      <br>&emsp;&emsp;HelloWorld h = new HelloWorld(); //&lt-- you'll learn about this later
       <br>
-      <br>    h.myMethod();
-      <br>    //this will print dilan! because it's a public method in the other class.
+      <br>&emsp;&emsp;h.myMethod();
+      <br>&emsp;&emsp;//this will print dilan! because it's a public method in the other class.
       <br>
-      <br>    h.myOtherMethod();
-      <br>    //you'll get a thick red underline here because you can't call this private method from this other class.
+      <br>&emsp;&emsp;h.myOtherMethod();
+      <br>&emsp;&emsp;//you'll get a thick red underline here because you can't call this private method from this other class.
       <br>
-      <br>  }
+      <br>&emsp;}
       <br>
       <br>}
     </code>
@@ -94,38 +94,38 @@
     <br>
     <code>public void runThis() {
       <br>
-      <br>  System.out.println("dilan!");
+      <br>&emsp;System.out.println("dilan!");
       <br>
       <br>}
       <br>
       <br>
       <br>public int getANumber() {
       <br>
-      <br>  int number = 0;
+      <br>&emsp;int number = 0;
       <br>
-      <br>  //maybe do stuff with that number
+      <br>&emsp;//maybe do stuff with that number
       <br>
-      <br>  return number;
+      <br>&emsp;return number;
       <br>
       <br>}
       <br>
       <br>
       <br>public String getAWord() {
       <br>
-      <br>  return "Computer";
+      <br>&emsp;return "Computer";
       <br>
       <br>}
       <br>
       <br>
       <br>public void run() {
       <br>
-      <br>  runThis(); //this will print out dilan!
+      <br>&emsp;runThis(); //this will print out dilan!
       <br>
-      <br>  int i = getANumber(); //this will set whatever number that the getANumber method returns to a variable
+      <br>&emsp;int i = getANumber(); //this will set whatever number that the getANumber method returns to a variable
       <br>
-      <br>  System.out.println(i); //this will print out that number
+      <br>&emsp;System.out.println(i); //this will print out that number
       <br>
-      <br>  System.out.println(getAWord()); //this will print out Computer
+      <br>&emsp;System.out.println(getAWord()); //this will print out Computer
       <br>
       <br>}
     </code>
