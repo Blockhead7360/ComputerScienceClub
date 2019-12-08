@@ -1,7 +1,10 @@
 <html>
   <p><a href="http://repo.blockhead7360.com/ComputerScienceClub/MeetingLogs">&lt&lt Back</a>  Computer Science Club</p>
   <h1>November 13 2019 - Java 5 (methods 1, user input)</h1>
-  <p>At this meeting, we went over the basics of methods and how to get user input into a program!</p>
+  <p>At this meeting, we went over the basics of methods and how to get user input into a program!
+    <br>
+    <br>I'm doing the meeting logs for both 11/13 and 11/20 at the same time, so we may have done the stuff in the two logs in a different order.
+  </p>
 
   <p><br><br><br></p>
 
@@ -11,135 +14,180 @@
     <br>(btw, that public static void main thing that we always have, that's a method!)
     <br>
     <br>
-    
-  <p><br><br><br></p>
-
-  <h2>Loops</h2>
-  
-  <p>Loops allow for the same code to be run multiple times. You can use them to keep doing something over and over again until something happens, or to loop through an array and do something with each value.
-    <br>You'll see what I mean.
-    <br>
-    <br><b>for loop</b>
-    <br>A for loop has 3 parts, an initialization, a termination, and an increment. Here's a template:
+    <br><b>Writing and calling a method</b>
+    <br>Most of the methods we create will look something like this:
     <br>
     <br>
-    <code>for ([init]; [term]; [inc]){
-      <br>
+    <code>public void hello() {
       <br>
       <br>}
     </code>
     <br>
-    <br>In the initialization, you create or set a variable to a starting value. Typically, this is an integer.
-    <br>In the termination, you put a boolean statement (something you'd have in an if statement). While this is true, the loop will run. As soon as it's false, the loop will end.
-    <br>In the increment, you put a math statement, modifying the variable that you created to eventually make the termination statement false.
+    <br>This is a basic method named hello, and within the curly brackets goes your code.
+    <br>
+    <br>
+    <br>To call a method, simply use
+    <br>
+    <br>
+    <code>hello();
+    </code>
+    <br>
+    <br>in another part of your code, and the hello method will run. Obviously, if your method isn't named hello, then you'd call it with whatever you named it.
+    <br>
+    <br>
+    <br>
+    <br><b>Method modifiers</b>
+    <br>This is an intro to methods, so for now, you'll know about two of the method modifiers: public and private.
+    <br>
+    <br>When a method is defined as public, it means that any other class (you'll learn about classes later) can access it.
+    <br>
+    <br>When a method is defined as private, it means that this method can only be called within your class.
+    <br>
+    <br>Check out this example:
+    <br>
+    <br>
+    <code>public class HelloWorld {
+      <br>
+      <br>  public void myMethod() {
+      <br>
+      <br>    System.out.println("dilan!");
+      <br>
+      <br>  }
+      <br>
+      <br>  private void myOtherMethod() {
+      <br>
+      <br>    System.out.println("ranai!");
+      <br>
+      <br>  }
+      <br>
+      <br>}
+      <br>
+      <br>
+      <br>public class ClassyClass {
+      <br>
+      <br>  public static void main(String[] args) {
+      <br>
+      <br>    HelloWorld h = new HelloWorld(); //&lt-- you'll learn about this later
+      <br>
+      <br>    h.myMethod();
+      <br>    //this will print dilan! because it's a public method in the other class.
+      <br>
+      <br>    h.myOtherMethod();
+      <br>    //you'll get a thick red underline here because you can't call this private method from this other class.
+      <br>
+      <br>  }
+      <br>
+      <br>}
+    </code>
+    <br>
+    <br>Don't understand the example? There is some stuff we haven't learned, but if you have questions on the modifiers, let me know.
+    <br>
+    <br>
+    <br>
+    <br><b>Method return type</b>
+    <br>You're probably like: okay I kinda get the public private stuff but what the heck is that "void" thing in that line of code? Well, my friend, that's the return type.
+    <br>
+    <br>In this spot, put whatever object or variable type that you'd want to return from this method. Void means it doesn't return anything and just runs.
+    <br>
     <br>Here's an example:
     <br>
     <br>
-    <code>for (int i = 0; i &lt 5; i++){
+    <code>public void runThis() {
       <br>
-      <br>  //code
+      <br>  System.out.println("dilan!");
+      <br>
+      <br>}
+      <br>
+      <br>
+      <br>public int getANumber() {
+      <br>
+      <br>  int number = 0;
+      <br>
+      <br>  //maybe do stuff with that number
+      <br>
+      <br>  return number;
+      <br>
+      <br>}
+      <br>
+      <br>
+      <br>public String getAWord() {
+      <br>
+      <br>  return "Computer";
+      <br>
+      <br>}
+      <br>
+      <br>
+      <br>public void run() {
+      <br>
+      <br>  runThis(); //this will print out dilan!
+      <br>
+      <br>  int i = getANumber(); //this will set whatever number that the getANumber method returns to a variable
+      <br>
+      <br>  System.out.println(i); //this will print out that number
+      <br>
+      <br>  System.out.println(getAWord()); //this will print out Computer
       <br>
       <br>}
     </code>
     <br>
-    <br>In this example, the code inside will run 5 times (i starts at 0 and then 1 is added every time the loop runs (see the section on increment and number modifications below), but will stop when i = 5, because 5 &lt 5 is false). Get it?
-    <br>
-    <br>
-    <br>
-    <br><b>while loop</b>
-    <br>The while loop is a bit less complicated, but not as useful as the for loop. This only has one parameter, a termination. The other information (like the stuff stored in a for loop) would have to be created and stored elsewhere.
-    <br>
-    <br>
-    <code>boolean isCool = true;
-      <br>
-      <br>while (isCool) {
-      <br>
-      <br>  //does stuff over and over again until isCool is set to false
-      <br>
-      <br>}
-    </code>
-    <br>
-    <br>
-    <br>
-    <br><b>do while loop</b>
-    <br>The do while loop is just like a while loop, but it will always be run at least ONE time.
-    <br>Basically, it runs once (regardless of condition), then checks to see if the condition is true to keep running, where a while loop will only start if the condition is true.
-    <br>
-    <br>
-    <code>do {
-      <br>
-      <br>  //code
-      <br>
-      <br>} while (isCool);
-    </code>
+    <br>Remember that you can replace the "int" or "String" with any variable type or object in your code.
   </p>
   
   <p><br><br><br></p>
-
-  <h2>Increment and Number Modifications</h2>
   
-  <p><b>Adding, multiplying, subtracting, and dividing a number</b>
-    <br>To add a value to a number and save it, you can do the following:
+  <h2>User Input (Scanner)</h2>
+  
+  <p>We're always printing stuff out to the console with System.out, but now let's try allowing the user to type something into the console and using it in the program.
     <br>
     <br>
-    <code>int number = 0;
+    <br><b>Preparing the scanner</b>
+    <br>In your code, let's create a Scanner object. We'll go over how making an object works on a later date, but for now, follow as done below (you can name the variable whatever you want, though):
+    <br>
+    <br>
+    <code>Scanner myscanner = new Scanner(System.in);
+    </code>
+    <br>
+    <br>
+    <br>
+    <br><b>Using the scanner for numbers</b>
+    <br>Now that we have a scanner named myscanner, we can use it to ask for user input. Watch this:
+    <br>
+    <br>
+    <code>System.out.println("Enter a number");
       <br>
-      <br>number = number + 5;
+      <br>int thatNumber = myscanner.nextInt();
     </code>
     <br>
-    <br>5 is added to the variable, and then it is saved by setting the new value to that same variable. So number is now 5 (since it was 0 + 5).
+    <br>When the nextInt method from the scanner is called, the program will pause until the user enters a number into the console.
     <br>
-    <br>You can replace the + with a -, *, or / dpeending on if you want to subtract, multiply, or divide.
+    <br>Now, we have that number stored in our thatNumber variable.
     <br>
-    <br>
-    <br>
-    <br><b>A shorter way to add, multiply, subtract, and divide (and save) a number</b>
-    <br>What if there was a shorter way of doing
+    <br>Watch me print out the sum of two user-inputted numbers:
     <br>
     <br>
-    <code>number = number + 5;
+    <code>System.out.println("Enter the first number");
+      <br>
+      <br>int numberOne = myScanner.nextInt();
+      <br>
+      <br>System.out.println("Enter the second number");
+      <br>
+      <br>int numberTwo = myScanner.nextInt();
+      <br>
+      <br>int total = numberOne + numberTwo;
+      <br>
+      <br>System.out.println("The total is: " + total);
     </code>
     <br>
-    <br>Oh wait! There is!
-    <br>
-    <br>
-    <code>number += 5;
-    </code>
-    <br>
-    <br>Writing it like that does the same thing as adding that number and saving it to the variable. You can do the same with <code>-=</code> (subtract), <code>*=</code> (multiply), and <code>/=</code> (divide).
+    <br>Magic? No, it's science!
     <br>
     <br>
     <br>
-    <br><b>An even shorter way to add or subtract 1 from a number</b>
-    <br>What if there was a shorter way of doing
+    <br><b>Using the scanner for words</b>
+    <br>You can get a word from the console by using scanner's next method.
     <br>
     <br>
-    <code>number = number + 1;
-    </code>
-    <br>
-    <br>Oh wait. We literally just had a shorter way.
-    <br>
-    <br>
-    <code>number += 1;
-    </code>
-    <br>
-    <br>How could it get any shorter? Lol well it can.
-    <br>
-    <br>
-    <code>number++;
-    </code>
-    <br>
-    <br>That adds 1 to that variable's current number. And guess what?
-    <br>
-    <br>
-    <code>number--;
-    </code>
-    <br>
-    <br>That subtracts 1 from that variable's current nmumber.
-    <br>
-    <br>Don't try <code>number++5</code> that's not a thing. This only works with adding and subtracting ONE.
-    <br>
-    <br>That's useful for the for loop we saw above (instead of typing <code>i = i + 1</code> in the increment section, you can just use <code>i++</code>. However, both ways work.
+    <code>String wordInput = myscanner.next();
+    </code> 
   </p>
   
   <p><br><br><br></p>
