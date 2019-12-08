@@ -1,0 +1,77 @@
+<html>
+  <p><a href="http://repo.blockhead7360.com/ComputerScienceClub/MeetingLogs">&lt&lt Back</a>  Computer Science Club</p>
+  <h1>November 20 2019 - Challenge 1 (adding addiction!), Java 6 (methods 2)</h1>
+  <p>At this meeting, we did the first challenge and some more stuff with methods.
+    <br>
+    <br>I'm doing the meeting logs for both 11/13 and 11/20 at the same time (along with like 3 other ones lol I'm so behind), so we may have done the stuff in the two logs in a different order.
+  </p>
+
+  <p><br><br><br></p>
+
+  <h2>Adding Addiction! - Challenge 1</h2>
+
+  <p>Use your knowledge of arrays, user input, loops (optional), and other stuff to take 5 numbers from the user and print out their sum.
+  </p>
+  
+  <p><br><br><br></p>
+  
+  <h2>User Input (Scanner)</h2>
+  
+  <p>We're always printing stuff out to the console with System.out, but now let's try allowing the user to type something into the console and using it in the program.
+    <br>
+    <br>
+    <br><b>Preparing the scanner</b>
+    <br>In your code, let's create a Scanner object. We'll go over how making an object works on a later date, but for now, follow as done below (you can name the variable whatever you want, though):
+    <br>
+    <br>
+    <code>Scanner myscanner = new Scanner(System.in);
+    </code>
+    <br>
+    <br>
+    <br>
+    <br><b>Using the scanner for numbers</b>
+    <br>Now that we have a scanner named myscanner, we can use it to ask for user input. Watch this:
+    <br>
+    <br>
+    <code>System.out.println("Enter a number");
+      <br>
+      <br>int thatNumber = myscanner.nextInt();
+    </code>
+    <br>
+    <br>When the nextInt method from the scanner is called, the program will pause until the user enters a number into the console.
+    <br>
+    <br>Now, we have that number stored in our thatNumber variable.
+    <br>
+    <br>Watch me print out the sum of two user-inputted numbers:
+    <br>
+    <br>
+    <code>System.out.println("Enter the first number");
+      <br>
+      <br>int numberOne = myScanner.nextInt();
+      <br>
+      <br>System.out.println("Enter the second number");
+      <br>
+      <br>int numberTwo = myScanner.nextInt();
+      <br>
+      <br>int total = numberOne + numberTwo;
+      <br>
+      <br>System.out.println("The total is: " + total);
+    </code>
+    <br>
+    <br>Magic? No, it's science!
+    <br>
+    <br>
+    <br>
+    <br><b>Using the scanner for words</b>
+    <br>You can get a word from the console by using scanner's next method.
+    <br>
+    <br>
+    <code>String wordInput = myscanner.next();
+    </code> 
+  </p>
+  
+  <p><br><br><br></p>
+  
+  <p><b>If you have any questions, ask them at Computer Science Club!</b></p>
+    
+</html>
