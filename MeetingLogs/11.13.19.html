@@ -1,0 +1,149 @@
+<html>
+  <p><a href="http://repo.blockhead7360.com/ComputerScienceClub/MeetingLogs">&lt&lt Back</a>  Computer Science Club</p>
+  <h1>November 13 2019 - Java 5 (methods 1, user input)</h1>
+  <p>At this meeting, we went over the basics of methods and how to get user input into a program!</p>
+
+  <p><br><br><br></p>
+
+  <h2>Intro to Methods</h2>
+
+  <p>Methods are blocks of code that you can call in your program. All of your functional code has to be inside a method (only variables and classes can be outside).
+    <br>(btw, that public static void main thing that we always have, that's a method!)
+    <br>
+    <br>
+    
+  <p><br><br><br></p>
+
+  <h2>Loops</h2>
+  
+  <p>Loops allow for the same code to be run multiple times. You can use them to keep doing something over and over again until something happens, or to loop through an array and do something with each value.
+    <br>You'll see what I mean.
+    <br>
+    <br><b>for loop</b>
+    <br>A for loop has 3 parts, an initialization, a termination, and an increment. Here's a template:
+    <br>
+    <br>
+    <code>for ([init]; [term]; [inc]){
+      <br>
+      <br>
+      <br>}
+    </code>
+    <br>
+    <br>In the initialization, you create or set a variable to a starting value. Typically, this is an integer.
+    <br>In the termination, you put a boolean statement (something you'd have in an if statement). While this is true, the loop will run. As soon as it's false, the loop will end.
+    <br>In the increment, you put a math statement, modifying the variable that you created to eventually make the termination statement false.
+    <br>Here's an example:
+    <br>
+    <br>
+    <code>for (int i = 0; i &lt 5; i++){
+      <br>
+      <br>  //code
+      <br>
+      <br>}
+    </code>
+    <br>
+    <br>In this example, the code inside will run 5 times (i starts at 0 and then 1 is added every time the loop runs (see the section on increment and number modifications below), but will stop when i = 5, because 5 &lt 5 is false). Get it?
+    <br>
+    <br>
+    <br>
+    <br><b>while loop</b>
+    <br>The while loop is a bit less complicated, but not as useful as the for loop. This only has one parameter, a termination. The other information (like the stuff stored in a for loop) would have to be created and stored elsewhere.
+    <br>
+    <br>
+    <code>boolean isCool = true;
+      <br>
+      <br>while (isCool) {
+      <br>
+      <br>  //does stuff over and over again until isCool is set to false
+      <br>
+      <br>}
+    </code>
+    <br>
+    <br>
+    <br>
+    <br><b>do while loop</b>
+    <br>The do while loop is just like a while loop, but it will always be run at least ONE time.
+    <br>Basically, it runs once (regardless of condition), then checks to see if the condition is true to keep running, where a while loop will only start if the condition is true.
+    <br>
+    <br>
+    <code>do {
+      <br>
+      <br>  //code
+      <br>
+      <br>} while (isCool);
+    </code>
+  </p>
+  
+  <p><br><br><br></p>
+
+  <h2>Increment and Number Modifications</h2>
+  
+  <p><b>Adding, multiplying, subtracting, and dividing a number</b>
+    <br>To add a value to a number and save it, you can do the following:
+    <br>
+    <br>
+    <code>int number = 0;
+      <br>
+      <br>number = number + 5;
+    </code>
+    <br>
+    <br>5 is added to the variable, and then it is saved by setting the new value to that same variable. So number is now 5 (since it was 0 + 5).
+    <br>
+    <br>You can replace the + with a -, *, or / dpeending on if you want to subtract, multiply, or divide.
+    <br>
+    <br>
+    <br>
+    <br><b>A shorter way to add, multiply, subtract, and divide (and save) a number</b>
+    <br>What if there was a shorter way of doing
+    <br>
+    <br>
+    <code>number = number + 5;
+    </code>
+    <br>
+    <br>Oh wait! There is!
+    <br>
+    <br>
+    <code>number += 5;
+    </code>
+    <br>
+    <br>Writing it like that does the same thing as adding that number and saving it to the variable. You can do the same with <code>-=</code> (subtract), <code>*=</code> (multiply), and <code>/=</code> (divide).
+    <br>
+    <br>
+    <br>
+    <br><b>An even shorter way to add or subtract 1 from a number</b>
+    <br>What if there was a shorter way of doing
+    <br>
+    <br>
+    <code>number = number + 1;
+    </code>
+    <br>
+    <br>Oh wait. We literally just had a shorter way.
+    <br>
+    <br>
+    <code>number += 1;
+    </code>
+    <br>
+    <br>How could it get any shorter? Lol well it can.
+    <br>
+    <br>
+    <code>number++;
+    </code>
+    <br>
+    <br>That adds 1 to that variable's current number. And guess what?
+    <br>
+    <br>
+    <code>number--;
+    </code>
+    <br>
+    <br>That subtracts 1 from that variable's current nmumber.
+    <br>
+    <br>Don't try <code>number++5</code> that's not a thing. This only works with adding and subtracting ONE.
+    <br>
+    <br>That's useful for the for loop we saw above (instead of typing <code>i = i + 1</code> in the increment section, you can just use <code>i++</code>. However, both ways work.
+  </p>
+  
+  <p><br><br><br></p>
+  
+  <p><b>If you have any questions, ask them at Computer Science Club!</b></p>
+    
+</html>
